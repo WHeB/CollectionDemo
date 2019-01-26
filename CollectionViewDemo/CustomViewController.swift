@@ -40,9 +40,9 @@ class CustomViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if (indexPath.row % 2 == 0) {
-            return CGSize.init(width: 70, height: 70)
+            return CGSize.init(width: ScreenW / 6, height: ScreenW / 6)
         }else {
-            return CGSize.init(width: 140, height: 140)
+            return CGSize.init(width: ScreenW / 3, height: ScreenW / 3)
         }
     }
     
@@ -51,5 +51,4 @@ class CustomViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.backgroundColor = UIColor.init().arc4randomaColor()
         return cell
     }
-    
 }
